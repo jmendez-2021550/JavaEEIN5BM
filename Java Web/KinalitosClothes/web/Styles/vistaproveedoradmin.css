@@ -198,7 +198,7 @@ h1 {
 
 
 /*Boton crear*/
-.btn_crear_producto {
+.btn_crear {
     --main-focus: #00e1ff;
     --font-color: #000000;
     --bg-color-sub: #5ccbff;
@@ -223,7 +223,7 @@ h1 {
     font-family: inherit;
 }
 
-.btn_crear_producto,
+.btn_crear,
 .btn_icono,
 .bnt_texto {
     transition: all 0.3s ease;
@@ -249,28 +249,28 @@ h1 {
     transition: all 0.3s ease;
 }
 
-.btn_crear_producto i {
+.btn_crear i {
     color: var(--main-color);
     font-size: 18px;
     transition: all 0.3s ease;
 }
 
-.btn_crear_producto:hover {
+.btn_crear:hover {
     background-color: var(--bg-color);
 }
 
-.btn_crear_producto:hover .bnt_texto {
+.btn_crear:hover .bnt_texto {
     color: transparent;
 }
 
-.btn_crear_producto:hover .btn_icono {
+.btn_crear:hover .btn_icono {
     width: 100%;
     right: 0;
     background-color: var(--bg-color-sub);
     z-index: 1;
 }
 
-.btn_crear_producto:active {
+.btn_crear:active {
     transform: translate(3px, 3px);
     box-shadow: 0px 0px var(--main-color);
 }
@@ -672,7 +672,7 @@ tr:hover {
     .nav-content {
         padding: 15px 20px;
     }
-    
+
     .table-container {
         margin-top: 20px;
     }

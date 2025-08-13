@@ -1,5 +1,10 @@
+
 package com.kinalitosclothes.modelo;
 
+/**
+ *
+ * @author PC
+ */
 public class Productos {
     private int codigoProducto;
     private String nombreProducto;
@@ -11,6 +16,7 @@ public class Productos {
     private int codigoCategoria;
 
     public Productos() {
+
     }
 
     public Productos(int codigoProducto, String nombreProducto, String descripcionProducto, double precioProducto, String talla, int stock, int codigoProveedor, int codigoCategoria) {
@@ -87,4 +93,10 @@ public class Productos {
     public void setCodigoCategoria(int codigoCategoria) {
         this.codigoCategoria = codigoCategoria;
     }
+
+    @Override
+    public String toString() {
+        return "Productos{" + "codigoProducto=" + codigoProducto + ", nombreProducto=" + nombreProducto + ", descripcionProducto=" + descripcionProducto + ", precioProducto=" + precioProducto + ", talla=" + talla + ", stock=" + stock + ", codigoProveedor=" + codigoProveedor + ", codigoCategoria=" + codigoCategoria + '}';
+    }
+
 }

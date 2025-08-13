@@ -3,7 +3,7 @@ package com.kinalitosclothes.modelo;
 public class DetallePedidos {
     private int codigoDetalleP;
     private int cantidad;
-    private double subtotal;
+    private Double subtotal;
     private String descripcion;
     private int codigoPedido;
     private int codigoProducto;
@@ -11,7 +11,7 @@ public class DetallePedidos {
     public DetallePedidos() {
     }
 
-    public DetallePedidos(int codigoDetalleP, int cantidad, double subtotal, String descripcion, int codigoPedido, int codigoProducto) {
+    public DetallePedidos(int codigoDetalleP, int cantidad, Double subtotal, String descripcion, int codigoPedido, int codigoProducto) {
         this.codigoDetalleP = codigoDetalleP;
         this.cantidad = cantidad;
         this.subtotal = subtotal;
@@ -36,11 +36,11 @@ public class DetallePedidos {
         this.cantidad = cantidad;
     }
 
-    public double getSubtotal() {
+    public Double getSubtotal() {
         return subtotal;
     }
 
-    public void setSubtotal(double subtotal) {
+    public void setSubtotal(Double subtotal) {
         this.subtotal = subtotal;
     }
 

@@ -2,8 +2,7 @@ package com.kinalitosclothes.modelo;
 
 public class Categorias {
     private int codigoCategoria;
-    private String nombreCategoria;
-    private String descripcionCategoria;
+    private String nombreCategoria, descripcionCategoria;
     private Genero genero;
     private RangoEdad rangoEdad;
 
@@ -65,4 +64,14 @@ public class Categorias {
     public void setRangoEdad(RangoEdad rangoEdad) {
         this.rangoEdad = rangoEdad;
     }
-}           
+
+    @Override
+    public String toString() {
+        return "Categorias{" + "Codigo Categoria: " + codigoCategoria
+                + "\nNombre Categoria: " + nombreCategoria
+                + "\nDescripcion Categoria=" + descripcionCategoria
+                + "\nGenero: " + genero
+                + "\nRango Edad: " + rangoEdad + '}';
+    }
+
+}

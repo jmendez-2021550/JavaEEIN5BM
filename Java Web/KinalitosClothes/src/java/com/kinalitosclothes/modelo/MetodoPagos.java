@@ -2,18 +2,18 @@ package com.kinalitosclothes.modelo;
 
 public class MetodoPagos {
     private int codigoMetodoPago;
-    private TipoMetodoPago tipoMetodoPago;
+    private TipoMetodo tipoMetodoPago;
     private String entidadFinanciaera;
     private String moneda;
-
-    public enum TipoMetodoPago {
+    
+    public enum TipoMetodo {
         Tarjeta, Efectivo
     }
 
     public MetodoPagos() {
     }
 
-    public MetodoPagos(int codigoMetodoPago, TipoMetodoPago tipoMetodoPago, String entidadFinanciaera, String moneda) {
+    public MetodoPagos(int codigoMetodoPago, TipoMetodo tipoMetodoPago, String entidadFinanciaera, String moneda) {
         this.codigoMetodoPago = codigoMetodoPago;
         this.tipoMetodoPago = tipoMetodoPago;
         this.entidadFinanciaera = entidadFinanciaera;
@@ -28,11 +28,11 @@ public class MetodoPagos {
         this.codigoMetodoPago = codigoMetodoPago;
     }
 
-    public TipoMetodoPago getTipoMetodoPago() {
+    public TipoMetodo getTipoMetodoPago() {
         return tipoMetodoPago;
     }
 
-    public void setTipoMetodoPago(TipoMetodoPago tipoMetodoPago) {
+    public void setTipoMetodoPago(TipoMetodo tipoMetodoPago) {
         this.tipoMetodoPago = tipoMetodoPago;
     }
 

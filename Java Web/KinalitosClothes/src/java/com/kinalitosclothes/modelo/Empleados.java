@@ -1,6 +1,12 @@
+
 package com.kinalitosclothes.modelo;
 
+/**
+ *
+ * @author PC
+ */
 public class Empleados {
+
     private int codigoEmpleado;
     private String nombreEmpleado;
     private String apellidoEmpleado;
@@ -77,4 +83,21 @@ public class Empleados {
     public void setCodigoUsuario(int codigoUsuario) {
         this.codigoUsuario = codigoUsuario;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Empleados{");
+        sb.append("codigoEmpleado=").append(codigoEmpleado);
+        sb.append(", nombreEmpleado=").append(nombreEmpleado);
+        sb.append(", apellidoEmpleado=").append(apellidoEmpleado);
+        sb.append(", correoEmpleado=").append(correoEmpleado);
+        sb.append(", telefonoEmpleado=").append(telefonoEmpleado);
+        sb.append(", direccionEmpleado=").append(direccionEmpleado);
+        sb.append(", codigoUsuario=").append(codigoUsuario);
+        sb.append('}');
+        return sb.toString();
+    }
+
+ 
 }

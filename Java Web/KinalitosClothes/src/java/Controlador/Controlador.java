@@ -1,0 +1,105 @@
+package Controlador;
+
+import com.kinalitosclothes.modelo.Empleados;
+import com.kinalitosclothes.modelo.EmpleadosDAO;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class Controlador extends HttpServlet {
+    EmpleadosDAO empleadosDAO = new EmpleadosDAO();
+
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        String menu = request.getParameter("menu");
+        String accion = request.getParameter("accion");
+        if (menu.equals("Principal")) {
+            request.getRequestDispatcher("Index/Principal.jsp").forward(request, response);
+        } else if (menu.equals("Empleado")) {
+            switch (accion) {
+                case "Listar":
+                    List listaEmpleados = empleadosDAO.listar();
+                    request.setAttribute("empleados", listaEmpleados);
+                    break;
+                    
+                    case "Agregar":   
+                    String codE = request.getParameter("txtCodigoEmpleado");
+                    int CodigoEmpleado = Integer.parseInt(codE);
+                    String nombreEmpleado = request.getParameter("txtNombreEmpleado");
+                    String apellidoEmpleado = request.getParameter("txtApellidoEmpleado");
+                    String correoEmpleado = request.getParameter("txtCorreoEmpleado");
+                    String telefonoEmpleado = request.getParameter("txtTelefonoEmpleado");
+                    String direccionEmpleado = request.getParameter("txtDireccionEmpleado");
+                    int codigoUsuario = Integer.parseInt(request.getParameter("txtCodigoUsuario"));
+
+                    Empleados empleado = new Empleados();
+                    empleado.setNombreEmpleado(nombreEmpleado);
+                    empleado.setApellidoEmpleado(apellidoEmpleado);
+                    empleado.setCorreoEmpleado(correoEmpleado);
+                    empleado.setTelefonoEmpleado(telefonoEmpleado);
+                    empleado.setDireccionEmpleado(direccionEmpleado);
+                    empleado.setCodigoUsuario(codigoUsuario);
+                    empleadosDAO.agregar(empleado);
+                    request.getRequestDispatcher("Controlador?menu=Empleado&accion=Listar").forward(request, response);
+                    break;
+
+
+                        
+    }
+        }
+    }
+
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    /**
+     * Handles the HTTP <code>GET</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    /**
+     * Handles the HTTP <code>POST</code> method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
+}

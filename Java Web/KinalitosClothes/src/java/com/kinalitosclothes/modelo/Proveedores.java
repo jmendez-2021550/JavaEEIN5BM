@@ -1,6 +1,15 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.kinalitosclothes.modelo;
 
+/**
+ *
+ * @author PC
+ */
 public class Proveedores {
+
     private int codigoProveedor;
     private String nombreProveedor;
     private String telefonoProveedor;
@@ -57,4 +66,18 @@ public class Proveedores {
     public void setPaisProveedor(String paisProveedor) {
         this.paisProveedor = paisProveedor;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Proveedores{");
+        sb.append("codigoProveedor=").append(codigoProveedor);
+        sb.append(", nombreProveedor=").append(nombreProveedor);
+        sb.append(", telefonoProveedor=").append(telefonoProveedor);
+        sb.append(", correoProveedor=").append(correoProveedor);
+        sb.append(", paisProveedor=").append(paisProveedor);
+        sb.append('}');
+        return sb.toString();
+    }
+
 }

@@ -12,7 +12,7 @@
             <div class="nav-content">
                 <div class="logo">K<span>C</span></div>
                 <ul class="menu">
-                    <li><a href="mispedidos.jsp">Mis Pedidos</a></li>
+                    <li><a href="${pageContext.request.contextPath}/Index/mispedidos.jsp">Mis Pedidos</a></li>
                 </ul>
             </div>
         </nav>
@@ -64,7 +64,6 @@
                     <div class="detalle-subtotal">Q 106.00</div>
                 </div>
 
-                <!-- Puedes agregar más detalles copiando la estructura de arriba -->
             </div>
         </div>
     </body>

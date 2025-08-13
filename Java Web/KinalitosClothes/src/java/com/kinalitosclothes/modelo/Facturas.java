@@ -3,6 +3,7 @@ package com.kinalitosclothes.modelo;
 import java.util.Date;
 
 public class Facturas {
+
     private int codigoFactura;
     private Date fechaEmision;
     private Double descuentoAplicado;
@@ -96,5 +97,17 @@ public class Facturas {
 
     public void setCodigoEmpleado(int codigoEmpleado) {
         this.codigoEmpleado = codigoEmpleado;
+    }
+
+    @Override
+    public String toString() {
+        return "Facturas{" + "\nCodigo Factura: " + codigoFactura
+                + "\nFecha Emision: " + fechaEmision
+                + "\nDescuento Aplicado: " + descuentoAplicado
+                + "\nTotal Factura: " + totalFactura
+                + "\nEstado Factura: " + estadoFactura
+                + "\nForma Entrega: " + formaEntrega
+                + "\nCodigo Pedido: " + codigoPedido
+                + "\nCodigo Empleado: " + codigoEmpleado + '}';
     }
 }

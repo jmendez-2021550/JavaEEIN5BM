@@ -3,20 +3,20 @@ package com.kinalitosclothes.modelo;
 import java.util.Date;
 
 public class Usuarios {
+
     private int codigoUsuario;
-    private String nombreUsuario;
-    private String contraseñaUsuario;
-    private TipoUsuario tipoUsuario;
+    private String nombreUsuario, contraseñaUsuario;
+    private TipoUsuarios tipoUsuario;
     private Date fechaRegistro;
 
-    public enum TipoUsuario {
+    public enum TipoUsuarios {
         Empleado, Cliente
     }
 
     public Usuarios() {
     }
 
-    public Usuarios(int codigoUsuario, String nombreUsuario, String contraseñaUsuario, TipoUsuario tipoUsuario, Date fechaRegistro) {
+    public Usuarios(int codigoUsuario, String nombreUsuario, String contraseñaUsuario, TipoUsuarios tipoUsuario, Date fechaRegistro) {
         this.codigoUsuario = codigoUsuario;
         this.nombreUsuario = nombreUsuario;
         this.contraseñaUsuario = contraseñaUsuario;
@@ -48,11 +48,11 @@ public class Usuarios {
         this.contraseñaUsuario = contraseñaUsuario;
     }
 
-    public TipoUsuario getTipoUsuario() {
+    public TipoUsuarios getTipoUsuario() {
         return tipoUsuario;
     }
 
-    public void setTipoUsuario(TipoUsuario tipoUsuario) {
+    public void setTipoUsuario(TipoUsuarios tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
     }
 
@@ -63,4 +63,14 @@ public class Usuarios {
     public void setFechaRegistro(Date fechaRegistro) {
         this.fechaRegistro = fechaRegistro;
     }
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "\nCodigo Usuario: " + codigoUsuario
+                + "\nNombre Usuario: " + nombreUsuario
+                + "\nClave de acceso: " + contraseñaUsuario
+                + "\nTipo Usuario: " + tipoUsuario
+                + "\nFecha Registro: " + fechaRegistro + '}';
+    }
+
 }

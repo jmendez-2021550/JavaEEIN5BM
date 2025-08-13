@@ -1,6 +1,15 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.kinalitosclothes.modelo;
 
+/**
+ *
+ * @author PC
+ */
 public class Clientes {
+
     private int codigoCliente;
     private String nombreCliente;
     private String apellidoCliente;
@@ -77,4 +86,20 @@ public class Clientes {
     public void setCodigoUsuario(int codigoUsuario) {
         this.codigoUsuario = codigoUsuario;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Clientes{");
+        sb.append("codigoCliente=").append(codigoCliente);
+        sb.append(", nombreCliente=").append(nombreCliente);
+        sb.append(", apellidoCliente=").append(apellidoCliente);
+        sb.append(", correoCliente=").append(correoCliente);
+        sb.append(", telefonoCliente=").append(telefonoCliente);
+        sb.append(", direccionCliente=").append(direccionCliente);
+        sb.append(", codigoUsuario=").append(codigoUsuario);
+        sb.append('}');
+        return sb.toString();
+    }
+
 }
